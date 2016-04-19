@@ -1,6 +1,6 @@
 author = 'mnoumanshahzad'
 
-from lib.myLib import _map, _reduce
+from lib.myLib import _map, _reduce, _filter
 
 odd = [1, 3, 5, 7, 9]
 even = [2, 4, 6, 8]
