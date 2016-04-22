@@ -33,3 +33,27 @@ def _filter(func_, list_):
     :return: List of filtered items that are true for the predicate
     """
     return [item for item in list_ if func_(item)]
+
+def _foldl(func_, list_):
+    """
+    Consumes the list of elements with left associativity
+    :param func_:
+    :param list_:
+    :return: A single aggregated value
+    """
+    acc = list_.pop(0)
+    for item in range(len(list_)):
+        acc = func_(acc, list_.pop(0))
+    return acc
+
+def _foldr(func_, list_):
+    """
+    Consumes the list of elements with right associativity
+    :param func_:
+    :param list_:
+    :return: A single aggregated value
+    """
+    acc = list_.pop()
+    for item in range(len(list_)):
+        acc = func_(acc, list_.pop())
+    return acc
