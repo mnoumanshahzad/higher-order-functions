@@ -57,3 +57,15 @@ def _foldr(func_, list_):
     for item in range(len(list_)):
         acc = func_(acc, list_.pop())
     return acc
+
+def _foreach(func_, list_):
+    """
+    Iterates over a list of elements and applies the given
+    functions on each element of the list
+    :param func_:
+    :param list_:
+    :return:
+    """
+    #result = list()
+    for index, item in enumerate(list_):
+        func_(item)
