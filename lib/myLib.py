@@ -69,3 +69,17 @@ def _foreach(func_, list_):
     #result = list()
     for index, item in enumerate(list_):
         func_(item)
+
+def _zip(flist, slist):
+    """
+    _zip takes in two lists as arguments and 
+    pair up each element of the list at the 
+    respective index
+    :param flist: 
+    :param slist: 
+    :return: A list of 2-tuples
+    """
+    result = list()
+    for i in range(min(len(flist), len(slist))):
+        result.append((flist[i], slist[i]))
+    return result
