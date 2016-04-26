@@ -66,7 +66,6 @@ def _foreach(func_, list_):
     :param list_:
     :return:
     """
-    #result = list()
     for index, item in enumerate(list_):
         func_(item)
 
